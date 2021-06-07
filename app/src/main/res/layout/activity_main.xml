@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.MainActivity">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/gradient_background"
+        android:scaleType="centerCrop" />
+
+    <TextView
+        android:id="@+id/tt_rock"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/pixelated_font"
+        android:text="ROCK"
+        android:textColor="@color/black"
+        android:textSize="60sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tt_paper"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/pixelated_font"
+        android:text="PAPER"
+        android:textColor="@color/black"
+        android:textSize="60sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tt_rock" />
+
+    <TextView
+        android:id="@+id/tt_scissors"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/pixelated_font"
+        android:text="SCISSORS"
+        android:textColor="@color/black"
+        android:textSize="60sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tt_paper" />
+
+    <TextView
+        android:id="@+id/tt_rock_white"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_15sdp"
+        android:fontFamily="@font/pixelated_font"
+        android:text="ROCK"
+        android:textColor="@color/white"
+        android:textSize="57sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tt_paper_white"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:fontFamily="@font/pixelated_font"
+        android:text="PAPER"
+        android:textColor="@color/white"
+        android:textSize="56sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tt_rock" />
+
+    <TextView
+        android:id="@+id/tt_scissors_white"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:fontFamily="@font/pixelated_font"
+        android:text="SCISSORS"
+        android:textColor="@color/white"
+        android:textSize="57sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tt_paper" />
+
+    <FrameLayout
+        android:id="@+id/fl_player_scissor_left"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_20sdp"
+        android:layout_marginBottom="@dimen/_50sdp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        tools:background="@drawable/bg_action_button">
+
+        <ImageView
+            android:id="@+id/iv_player_scissor"
+            android:layout_width="@dimen/_70sdp"
+            android:layout_height="@dimen/_70sdp"
+            android:src="@drawable/ic_scissors_8bit_left" />
+
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/fl_player_paper_left"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_20sdp"
+        android:layout_marginBottom="@dimen/_15sdp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@id/fl_player_scissor_left"
+        app:layout_constraintLeft_toLeftOf="parent"
+        tools:background="@drawable/bg_action_button">
+
+        <ImageView
+            android:id="@+id/iv_player_paper"
+            android:layout_width="@dimen/_70sdp"
+            android:layout_height="@dimen/_70sdp"
+            android:src="@drawable/ic_paper_8bit" />
+
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/fl_player_rock_left"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_20sdp"
+        android:layout_marginBottom="@dimen/_15sdp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@id/fl_player_paper_left"
+        app:layout_constraintLeft_toLeftOf="parent"
+        tools:background="@drawable/bg_action_button">
+
+        <ImageView
+            android:id="@+id/iv_player_rock"
+            android:layout_width="@dimen/_70sdp"
+            android:layout_height="@dimen/_70sdp"
+            android:src="@drawable/ic_rock_8bit" />
+
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/fl_com_scissor_right"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/_20sdp"
+        android:layout_marginBottom="@dimen/_50sdp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        tools:background="@drawable/bg_action_button">
+
+        <ImageView
+            android:id="@+id/iv_comp_scissor"
+            android:layout_width="@dimen/_70sdp"
+            android:layout_height="@dimen/_70sdp"
+            android:src="@drawable/ic_scissors_8bit_right" />
+
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/fl_com_paper_right"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/_20sdp"
+        android:layout_marginBottom="@dimen/_15sdp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@id/fl_com_scissor_right"
+        app:layout_constraintRight_toRightOf="parent"
+        tools:background="@drawable/bg_action_button">
+
+        <ImageView
+            android:id="@+id/iv_comp_paper"
+            android:layout_width="@dimen/_70sdp"
+            android:layout_height="@dimen/_70sdp"
+            android:src="@drawable/ic_paper_8bit" />
+
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/fl_com_rock_right"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/_20sdp"
+        android:layout_marginBottom="@dimen/_15sdp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@id/fl_com_paper_right"
+        app:layout_constraintRight_toRightOf="parent"
+        tools:background="@drawable/bg_action_button">
+
+        <ImageView
+            android:id="@+id/iv_comp_rock"
+            android:layout_width="@dimen/_70sdp"
+            android:layout_height="@dimen/_70sdp"
+            android:src="@drawable/ic_rock_8bit" />
+
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/un_player"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_15sdp"
+        android:layout_marginBottom="@dimen/_10sdp"
+        android:fontFamily="@font/pixelated_font"
+        android:text="PLAYER 1"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_30ssp"
+        app:layout_constraintBottom_toTopOf="@id/fl_player_rock_left"
+        app:layout_constraintLeft_toLeftOf="parent" />
+
+    <TextView
+        android:id="@+id/un_com"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/_25sdp"
+        android:layout_marginBottom="@dimen/_10sdp"
+        android:fontFamily="@font/pixelated_font"
+        android:text="COM"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_30ssp"
+        app:layout_constraintBottom_toTopOf="@id/fl_com_rock_right"
+        app:layout_constraintRight_toRightOf="parent" />
+
+    <TextView
+        android:id="@+id/un_player_white"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_18sdp"
+        android:layout_marginBottom="@dimen/_10sdp"
+        android:fontFamily="@font/pixelated_font"
+        android:text="PLAYER 1"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_28ssp"
+        app:layout_constraintBottom_toTopOf="@id/fl_player_rock_left"
+        app:layout_constraintLeft_toLeftOf="parent" />
+
+    <TextView
+        android:id="@+id/un_com_white"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/_28sdp"
+        android:layout_marginBottom="@dimen/_10sdp"
+        android:fontFamily="@font/pixelated_font"
+        android:text="COM"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_27ssp"
+        app:layout_constraintBottom_toTopOf="@id/fl_com_rock_right"
+        app:layout_constraintRight_toRightOf="parent" />
+
+    <ImageView
+        android:id="@+id/ic_restart"
+        android:layout_width="@dimen/_40sdp"
+        android:layout_height="@dimen/_40sdp"
+        android:layout_marginBottom="@dimen/_10sdp"
+        tools:src="@drawable/ic_restart_icon"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+    <ImageView
+        android:id="@+id/ic_versus"
+        android:layout_width="@dimen/_70sdp"
+        android:layout_height="@dimen/_70sdp"
+        android:layout_marginBottom="@dimen/_100sdp"
+        app:layout_constraintBottom_toTopOf="@id/ic_restart"
+        app:layout_constraintLeft_toLeftOf="@id/fl_player_paper_left"
+        app:layout_constraintRight_toRightOf="@id/fl_com_paper_right"
+        tools:src="@drawable/ic_versus_icon" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
