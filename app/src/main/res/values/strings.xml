@@ -1,3 +1,18 @@
 <resources>
     <string name="app_name">Rock Paper Scissors Game</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="text_title_form_fragment">YOUR NAME:</string>
+    <string name="text_error_toast_empty_name">NAME CANNOT BE EMPTY</string>
+    <string name="text_title_first_intro_page">WELCOME!</string>
+    <string name="text_desc_first_intro_page">TO THE ROCK PAPER SCISSORS GAME</string>
+    <string name="text_title_second_intro_page">VS COMPUTER</string>
+    <string name="text_desc_second_intro_page">YOU CAN PLAY AGAINST A COMPUTER</string>
+    <string name="text_title_third_intro_page">VS PLAYER 2</string>
+    <string name="text_desc_third_intro_page">YOU CAN ALSO PLAY AGAINST ANOTHER PLAYER</string>
+    <string name="text_p2_name_vs_com">COMPUTER</string>
+    <string name="text_p2_name_vs_player">PLAYER 2</string>
+    <string name="text_title_menu">Hi %s !\nChoose your opponent!</string>
+    <string name="text_restart_game">restart game</string>
+    <string name="text_menu_choice_com">com</string>
+    <string name="text_menu_choice_player">player 2</string>
 </resources>

@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="16dp"
+    tools:context=".ui.dialog.PlayerOneWinVsP2DialogFragment">
+
+    <TextView
+        android:id="@+id/tv_title_game_result_draw_vs_com_dialog"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/pixelated_font"
+        android:text="game result"
+        android:textAllCaps="true"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <TextView
+        android:id="@+id/tv_result_draw_vs_com_dialog"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/pixelated_font"
+        android:textColor="@color/black"
+        android:text="it's a draw"
+        android:textAllCaps="true"
+        android:background="@drawable/bg_landingpage"
+        android:textAlignment="center"
+        android:textSize="50sp"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_title_game_result_draw_vs_com_dialog" />
+
+
+
+    <Button
+        android:id="@+id/btn_play_again_draw_vs_com_dialog"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="play again"
+        android:textAllCaps="true"
+        android:textStyle="bold"
+        android:fontFamily="@font/pixelated_font"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_result_draw_vs_com_dialog" />
+
+    <Button
+        android:id="@+id/btn_return_to_menu_draw_vs_com_dialog"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="return to menu"
+        android:textAllCaps="true"
+        android:textStyle="bold"
+        android:fontFamily="@font/pixelated_font"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btn_play_again_draw_vs_com_dialog" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

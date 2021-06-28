@@ -4,103 +4,31 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.MainActivity">
+    android:background="@drawable/bg_game"
+    tools:context=".ui.game.GameActivity">
 
     <ImageView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="@drawable/gradient_background"
-        android:scaleType="centerCrop" />
-
-    <TextView
-        android:id="@+id/tt_rock"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:fontFamily="@font/pixelated_font"
-        android:text="ROCK"
-        android:textColor="@color/black"
-        android:textSize="60sp"
+        android:id="@+id/iv_game_title"
+        android:layout_width="@dimen/_200sdp"
+        android:layout_height="@dimen/_200sdp"
+        android:src="@drawable/ic_game_title"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/tt_paper"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:fontFamily="@font/pixelated_font"
-        android:text="PAPER"
-        android:textColor="@color/black"
-        android:textSize="60sp"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tt_rock" />
-
-    <TextView
-        android:id="@+id/tt_scissors"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:fontFamily="@font/pixelated_font"
-        android:text="SCISSORS"
-        android:textColor="@color/black"
-        android:textSize="60sp"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tt_paper" />
-
-    <TextView
-        android:id="@+id/tt_rock_white"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/_15sdp"
-        android:fontFamily="@font/pixelated_font"
-        android:text="ROCK"
-        android:textColor="@color/white"
-        android:textSize="57sp"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/tt_paper_white"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/_5sdp"
-        android:fontFamily="@font/pixelated_font"
-        android:text="PAPER"
-        android:textColor="@color/white"
-        android:textSize="56sp"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tt_rock" />
-
-    <TextView
-        android:id="@+id/tt_scissors_white"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/_5sdp"
-        android:fontFamily="@font/pixelated_font"
-        android:text="SCISSORS"
-        android:textColor="@color/white"
-        android:textSize="57sp"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tt_paper" />
 
     <FrameLayout
         android:id="@+id/fl_player_scissor_left"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="@dimen/_20sdp"
-        android:layout_marginBottom="@dimen/_50sdp"
+        android:layout_marginStart="20dp"
+        android:layout_marginBottom="50dp"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         tools:background="@drawable/bg_action_button">
 
         <ImageView
-            android:id="@+id/iv_player_scissor"
+            android:id="@+id/iv_player_scissor_left"
             android:layout_width="@dimen/_70sdp"
             android:layout_height="@dimen/_70sdp"
             android:src="@drawable/ic_scissors_8bit_left" />
@@ -111,15 +39,15 @@
         android:id="@+id/fl_player_paper_left"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="@dimen/_20sdp"
-        android:layout_marginBottom="@dimen/_15sdp"
+        android:layout_marginStart="20dp"
+        android:layout_marginBottom="15dp"
         android:orientation="vertical"
         app:layout_constraintBottom_toTopOf="@id/fl_player_scissor_left"
         app:layout_constraintLeft_toLeftOf="parent"
         tools:background="@drawable/bg_action_button">
 
         <ImageView
-            android:id="@+id/iv_player_paper"
+            android:id="@+id/iv_player_paper_left"
             android:layout_width="@dimen/_70sdp"
             android:layout_height="@dimen/_70sdp"
             android:src="@drawable/ic_paper_8bit" />
@@ -130,15 +58,15 @@
         android:id="@+id/fl_player_rock_left"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="@dimen/_20sdp"
-        android:layout_marginBottom="@dimen/_15sdp"
+        android:layout_marginStart="20dp"
+        android:layout_marginBottom="15dp"
         android:orientation="vertical"
         app:layout_constraintBottom_toTopOf="@id/fl_player_paper_left"
         app:layout_constraintLeft_toLeftOf="parent"
         tools:background="@drawable/bg_action_button">
 
         <ImageView
-            android:id="@+id/iv_player_rock"
+            android:id="@+id/iv_player_rock_left"
             android:layout_width="@dimen/_70sdp"
             android:layout_height="@dimen/_70sdp"
             android:src="@drawable/ic_rock_8bit" />
@@ -146,18 +74,18 @@
     </FrameLayout>
 
     <FrameLayout
-        android:id="@+id/fl_com_scissor_right"
+        android:id="@+id/fl_player_scissor_right"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="@dimen/_20sdp"
-        android:layout_marginBottom="@dimen/_50sdp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="50dp"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         tools:background="@drawable/bg_action_button">
 
         <ImageView
-            android:id="@+id/iv_comp_scissor"
+            android:id="@+id/iv_player_scissors_right"
             android:layout_width="@dimen/_70sdp"
             android:layout_height="@dimen/_70sdp"
             android:src="@drawable/ic_scissors_8bit_right" />
@@ -165,18 +93,18 @@
     </FrameLayout>
 
     <FrameLayout
-        android:id="@+id/fl_com_paper_right"
+        android:id="@+id/fl_player_paper_right"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="@dimen/_20sdp"
-        android:layout_marginBottom="@dimen/_15sdp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="15dp"
         android:orientation="vertical"
-        app:layout_constraintBottom_toTopOf="@id/fl_com_scissor_right"
+        app:layout_constraintBottom_toTopOf="@id/fl_player_scissor_right"
         app:layout_constraintRight_toRightOf="parent"
         tools:background="@drawable/bg_action_button">
 
         <ImageView
-            android:id="@+id/iv_comp_paper"
+            android:id="@+id/iv_player_paper_right"
             android:layout_width="@dimen/_70sdp"
             android:layout_height="@dimen/_70sdp"
             android:src="@drawable/ic_paper_8bit" />
@@ -184,85 +112,62 @@
     </FrameLayout>
 
     <FrameLayout
-        android:id="@+id/fl_com_rock_right"
+        android:id="@+id/fl_player_rock_right"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="@dimen/_20sdp"
-        android:layout_marginBottom="@dimen/_15sdp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="15dp"
         android:orientation="vertical"
-        app:layout_constraintBottom_toTopOf="@id/fl_com_paper_right"
+        app:layout_constraintBottom_toTopOf="@id/fl_player_paper_right"
         app:layout_constraintRight_toRightOf="parent"
         tools:background="@drawable/bg_action_button">
 
         <ImageView
-            android:id="@+id/iv_comp_rock"
+            android:id="@+id/iv_player_rock_right"
             android:layout_width="@dimen/_70sdp"
             android:layout_height="@dimen/_70sdp"
             android:src="@drawable/ic_rock_8bit" />
 
     </FrameLayout>
 
-    <TextView
-        android:id="@+id/un_player"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="@dimen/_15sdp"
-        android:layout_marginBottom="@dimen/_10sdp"
-        android:fontFamily="@font/pixelated_font"
-        android:text="PLAYER 1"
-        android:textColor="@color/black"
-        android:textSize="@dimen/_30ssp"
-        app:layout_constraintBottom_toTopOf="@id/fl_player_rock_left"
-        app:layout_constraintLeft_toLeftOf="parent" />
 
     <TextView
-        android:id="@+id/un_com"
+        android:id="@+id/tv_player_left"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="@dimen/_25sdp"
-        android:layout_marginBottom="@dimen/_10sdp"
+        android:layout_marginStart="18dp"
+        android:layout_marginTop="10dp"
         android:fontFamily="@font/pixelated_font"
-        android:text="COM"
+        android:textAllCaps="true"
         android:textColor="@color/black"
-        android:textSize="@dimen/_30ssp"
-        app:layout_constraintBottom_toTopOf="@id/fl_com_rock_right"
-        app:layout_constraintRight_toRightOf="parent" />
-
-    <TextView
-        android:id="@+id/un_player_white"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="@dimen/_18sdp"
-        android:layout_marginBottom="@dimen/_10sdp"
-        android:fontFamily="@font/pixelated_font"
-        android:text="PLAYER 1"
-        android:textColor="@color/white"
         android:textSize="@dimen/_28ssp"
-        app:layout_constraintBottom_toTopOf="@id/fl_player_rock_left"
-        app:layout_constraintLeft_toLeftOf="parent" />
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/iv_game_title"
+        tools:text="PLAYER 1" />
 
     <TextView
-        android:id="@+id/un_com_white"
+        android:id="@+id/tv_player_right"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="@dimen/_28sdp"
-        android:layout_marginBottom="@dimen/_10sdp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="18dp"
         android:fontFamily="@font/pixelated_font"
-        android:text="COM"
-        android:textColor="@color/white"
+        android:textAllCaps="true"
+        android:textColor="@color/black"
         android:textSize="@dimen/_27ssp"
-        app:layout_constraintBottom_toTopOf="@id/fl_com_rock_right"
-        app:layout_constraintRight_toRightOf="parent" />
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/iv_game_title"
+        tools:text="COM" />
 
     <ImageView
         android:id="@+id/ic_restart"
         android:layout_width="@dimen/_40sdp"
         android:layout_height="@dimen/_40sdp"
         android:layout_marginBottom="@dimen/_10sdp"
-        tools:src="@drawable/ic_restart_icon"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent" />
+        app:layout_constraintRight_toRightOf="parent"
+        tools:src="@drawable/ic_restart_icon" />
 
     <ImageView
         android:id="@+id/ic_versus"
@@ -270,8 +175,33 @@
         android:layout_height="@dimen/_70sdp"
         android:layout_marginBottom="@dimen/_100sdp"
         app:layout_constraintBottom_toTopOf="@id/ic_restart"
-        app:layout_constraintLeft_toLeftOf="@id/fl_player_paper_left"
-        app:layout_constraintRight_toRightOf="@id/fl_com_paper_right"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
         tools:src="@drawable/ic_versus_icon" />
+
+    <TextView
+        android:id="@+id/tv_restart_game"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:fontFamily="@font/pixelated_font"
+        android:textAllCaps="true"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_15ssp"
+        app:layout_constraintBottom_toTopOf="@id/ic_restart"
+        app:layout_constraintLeft_toLeftOf="@id/ic_restart"
+        app:layout_constraintRight_toRightOf="@id/ic_restart"
+        tools:text="restart game" />
+
+    <ImageView
+        android:id="@+id/ic_return_to_menu"
+        android:rotation="50"
+        android:layout_marginTop="15dp"
+        app:layout_constraintRight_toLeftOf="@id/iv_game_title"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        tools:src="@drawable/ic_return_to_menu"
+        android:layout_width="@dimen/_50sdp"
+        android:layout_height="@dimen/_50sdp"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
